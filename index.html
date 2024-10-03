@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Stem панаир</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <style>
+    html, body, #map {
+      height: 100%;
+      margin: 0;
+    }
+
+    
+    .button-popup {
+        padding: 5px;
+        text-align: center;
+        background-color: white; 
+        color: black; 
+        cursor: pointer;
+        border: 2px solid #696969; 
+        border-radius: 5px;
+    }
+    .button-popup:hover {
+        background-color: #696969;
+        color: white; 
+        border: 2px solid#696969; 
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script>
+    // Създаване на карта с изглед към София
+    var map = L.map('map').setView([42.660413, 23.399216], 13);
+
+    // Добавяне на tile слой (OpenStreetMap например)
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    map.flyTo([42.660413, 23.399216], 19, {
+      animate: true,       // Анимация
+      duration: 2        // Продължителност в секунди
+    });
+
+    // Добавяне на слой OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Функция за действие при щракване върху маркера (бутон)
+    function onMarkerClick(pageUrl) {
+      window.location.href = pageUrl; // Пренасочване към страницата
+    }
+
+    // Създаване на маркери като бутони
+    // var marker1 = L.marker([42.660413, 23.399216]).addTo(map);
+    var marker2 = L.marker([42.660331, 23.399292]).addTo(map);
+    var marker3 = L.marker([42.660593, 23.398571]).addTo(map);
+    var marker4 = L.marker([42.660595, 23.398681]).addTo(map);
+    var marker5 = L.marker([42.660564, 23.398760]).addTo(map);
+    var marker6 = L.marker([42.660514, 23.398842]).addTo(map);
+    var marker7 = L.marker([42.660520, 23.398496]).addTo(map);
+    var marker8 = L.marker([42.660467, 23.398951]).addTo(map);
+    var marker9 = L.marker([42.660438, 23.399032]).addTo(map);
+    var marker10 = L.marker([42.660343, 23.398330]).addTo(map);
+    var marker11 = L.marker([42.660317, 23.398376]).addTo(map);
+    var marker12 = L.marker([42.660305, 23.398413]).addTo(map);
+    var marker13 = L.marker([42.660091, 23.398899]).addTo(map);
+    var marker14 = L.marker([42.660417, 23.398402]).addTo(map);
+    var marker15 = L.marker([42.660269, 23.398457]).addTo(map);
+    var marker16 = L.marker([42.660234, 23.398539]).addTo(map);
+    var marker17 = L.marker([42.660634, 23.398628]).addTo(map);
+    var marker18 = L.marker([42.660554, 23.398531]).addTo(map);
+
+    // // Добавяне на popup със "бутон" за първия маркер
+    // marker1.bindPopup('<div class="button-popup" onclick="onMarkerClick(\'page1.html\')">За училището</div>');
+    // marker1.bindPopup('<b>Към сайта на училището:</b><br><a href="https://4ou.bg/" target="_blank">4-то ОУ Проф. Джон Атанасов</a>');
+    marker2.bindPopup('<div class="button-popup" onclick="onMarkerClick(\'page2.html\')">Rock school</div>');
+    marker3.bindPopup('<div class="button-popup" onclick="onMarkerClick(\'page3.html\')">Модно дюкянче</div>');
+    marker4.bindPopup('<div class="button-popup" onclick="onMarkerClick(\'page4.html\')">Искам да знам</div>');
+    marker5.bindPopup('<div class="button-popup" onclick="onMarkerClick(\'page5.html\')">Оригами</div>');
+    marker6.bindPopup('<div class="button-popup" onclick="onMarkerClick(\'page6.html\')">Чужди езици</div>');
+    marker7.bindPopup('<div class="button-popup" onclick="onMarkerClick(\'page7.html\')">Проф. Джон Атанасов</div>');
+    marker8.bindPopup('<div class="button-popup" onclick="onMarkerClick(\'page8.html\')">LEGO</div>');
+    marker9.bindPopup('<div class="button-popup" onclick="onMarkerClick(\'page9.html\')">Сърфирам безопасно!</div>');
+    marker10.bindPopup('<div class="button-popup" onclick="onMarkerClick(\'page10.html\')">Подари емоция</div>');
+    marker11.bindPopup('<div class="button-popup" onclick="onMarkerClick(\'page11.html\')">Забавни експерименти</div>');
+    marker12.bindPopup('<div class="button-popup" onclick="onMarkerClick(\'page12.html\')">Тайните в науката</div>');
+    marker13.bindPopup('<div class="button-popup" onclick="onMarkerClick(\'page13.html\')">Еко-точност</div>');
+    marker14.bindPopup('<div class="button-popup" onclick="onMarkerClick(\'page14.html\')">Направи си сам</div>');
+    marker15.bindPopup('<div class="button-popup" onclick="onMarkerClick(\'page15.html\')">Енигма</div>');
+    marker16.bindPopup('<div class="button-popup" onclick="onMarkerClick(\'page16.html\')">Забавна химия</div>');
+    marker17.bindPopup('<div class="button-popup" onclick="onMarkerClick(\'page17.html\')">Учим нестандартно</div>');
+    marker18.bindPopup('<div class="button-popup" onclick="onMarkerClick(\'page18.html\')">Еко град на бъдещето</div>');
+    
+    
+
+    // Отваряне на popup веднага при зареждане (по избор)
+    // marker1.openPopup();
+    marker2.openPopur();
+    marker3.openPopur();
+    marker4.openPopur();
+    marker5.openPopur();  
+    marker6.openPopur();
+    marker7.openPopur();
+    marker8.openPopur(); 
+    marker9.openPopur();
+    marker10.openPopur();
+    marker11.openPopur();
+    marker12.openPopur();
+    marker13.openPopur();
+    marker14.openPopur();
+    marker15.openPopur();
+    marker16.openPopur();
+    marker17.openPopur();
+    marker18.openPopur();
+    
+    
+  </script>
+</body>
+</html>
